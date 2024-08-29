@@ -23,13 +23,10 @@ export function yourAnswerIs () {
 }
 
 export const isAnswerCorrect = (yourAnswer, questionNum, userName) => {
-    for (let i = 0; i < 3; i += 1) {
     const correctAnswer = (questionNum % 2 === 0) ? 'yes' : 'no';
     if (yourAnswer === correctAnswer) {
         return 'Correct!';
     } else {
         return `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`;
-        break;
     }
-}
 };
