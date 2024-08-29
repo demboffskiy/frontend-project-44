@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+/*import readlineSync from 'readline-sync';
 
 export function sayYourName() {
     const userName = readlineSync.question("May I have your name? ");
@@ -28,4 +28,4 @@ export const isAnswerCorrect = (yourAnswer, questionNum, userName) => {
         return 'Correct!';
     } 
     return `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`;
-};
+};  */
