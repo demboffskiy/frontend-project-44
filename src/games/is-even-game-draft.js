@@ -1,5 +1,10 @@
 import readlineSync from 'readline-sync';
-import sayYourName from "../cli.js";
+
+export function sayYourName() {
+    const userName = readlineSync.question("May I have your name? ");
+    return userName;
+};
+
 const getRandomNum = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -9,6 +14,7 @@ const getRandomNum = (min, max) => {
 export function randomNum () {
     const questionNum = getRandomNum(1, 100);
     console.log(`Question: ${questionNum}`);
+    return questionNum;
 }; 
 
 export function yourAnswerIs () {
@@ -16,17 +22,14 @@ export function yourAnswerIs () {
     return yourAnswer;
 }
 
-export function isAnswerCorrect () {
-    let result = '';
-    if (randomNum % 2 === 0) {
-        if (yourAnswer === 'yes') {
-            result = 'Correct!';
-        }
+export const isAnswerCorrect = (yourAnswer, questionNum, userName) => {
+    for (let i = 0; i < 3; i += 1) {
+    const correctAnswer = (questionNum % 2 === 0) ? 'yes' : 'no';
+    if (yourAnswer === correctAnswer) {
+        return 'Correct!';
+    } else {
+        return `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`;
+        break;
     }
-    else if (randomNum % 2 !== 0) {
-        if (yourAnswer === 'yes') {
-            result = `'yes' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${sayYourName}!`;
-        }
-    }
-    return result;
+}
 };
