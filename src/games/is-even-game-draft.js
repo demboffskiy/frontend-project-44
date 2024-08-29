@@ -1,32 +1,27 @@
 import readlineSync from 'readline-sync';
 
-export function sayYourName() {
-    const userName = readlineSync.question("May I have your name? ");
+
+export const helloUser = () => {
+    const userName = readlineSync.question('May I have your name? ');
+    console.log(`Hello, ${userName}!`);
     return userName;
 };
-
-const getRandomNum = (min, max) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-};
-
-export function randomNum () {
-    const questionNum = getRandomNum(1, 100);
-    console.log(`Question: ${questionNum}`);
-    return questionNum;
-}; 
-
-export function yourAnswerIs () {
-    const yourAnswer = readlineSync.question('Your answer: ');
-    return yourAnswer;
-}
-
-export const isAnswerCorrect = (yourAnswer, questionNum, userName) => {
-    const correctAnswer = (questionNum % 2 === 0) ? 'yes' : 'no';
-    if (yourAnswer === correctAnswer) {
-        return 'Correct!';
-    } else {
-        return `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`;
-    }
+export const gettingNumber = (userName) => {
+    let score = 0;
+    while (score < 3) {
+        const randomNumber = Math.round(Math.random() * 100);
+        console.log(`Question: ${randomNumber}`);
+        const yourAnswerIs = readlineSync.question('Your answer: ');
+        const correctAnswer = (randomNumber % 2 === 0) ? 'yes' : 'no';
+        if (randomNumber % 2 === 0 && yourAnswerIs === 'yes' || randomNumber % 2 !== 0 && yourAnswerIs === 'no') {
+            score += 1;
+            console.log('Correct!');
+        }
+        else if (randomNumber % 2 === 0 && yourAnswerIs === 'no' || randomNumber % 2 !== 0 && yourAnswerIs === 'yes') {
+            return console.log(`'${yourAnswerIs}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`);
+        }
+        else {
+            return console.log(`'${yourAnswerIs}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`);
+        }
+    } console.log(`Congratulations, ${userName}!`);
 };
