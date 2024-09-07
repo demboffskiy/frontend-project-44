@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { helloUser } from '../src/games/calc-game.js'; 
+import { sayYourNum } from '../src/games/calc-game.js'; 
 
-helloUser();
+sayYourNum();

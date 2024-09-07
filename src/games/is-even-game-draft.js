@@ -1,14 +1,9 @@
 import readlineSync from 'readline-sync';
+import { helloUser } from '../index.js';
 
-
-export const helloUser = () => {
-    console.log('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${userName}!`);
+export const gettingNumber = () => {
+    const userName = helloUser();
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
-    return userName;
-};
-export const gettingNumber = (userName) => {
     let score = 0;
     while (score < 3) {
         const randomNumber = Math.round(Math.random() * 100);
