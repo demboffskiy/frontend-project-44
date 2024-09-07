@@ -37,4 +37,4 @@ export const sayYourNum = () => {
             return console.log(`'${yourAnswerIs}' is wrong answer ;(. Correct answer was '${correctAnswer()}'. \nLet's try again ${userName}!`);
         }
     } console.log(`Congratulations, ${userName}!`);
-}
+};
