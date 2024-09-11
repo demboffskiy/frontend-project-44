@@ -3,18 +3,18 @@ import gameEngine from "../index.js";
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const answerIsCorrectIf = (randomNumber, randomNumber2) => {
+const answerIsCorrectIf = (randomNumber1, randomNumber2) => {
     while (randomNumber2 !== 0) {
         let temp = randomNumber2;
-        randomNumber2 = randomNumber % randomNumber2;
-        randomNumber = temp;
+        randomNumber2 = randomNumber1 % randomNumber2;
+        randomNumber1 = temp;
     }
-    return randomNumber;
-};
+    return randomNumber1;
+}
 
 const getQuestionAndAswer = () => {
-    const firstNumber = getRandom(100);
-    const secondNumber = getRandom(100);
+    const firstNumber = getRandom(1000);
+    const secondNumber = getRandom(1000);
 
     const question = `${firstNumber} ${secondNumber}`;
     const correctAnswer = answerIsCorrectIf(firstNumber, secondNumber);
