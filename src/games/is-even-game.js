@@ -1,4 +1,4 @@
-/*import readlineSync from 'readline-sync';
+/* import readlineSync from 'readline-sync';
 
 export function sayYourName() {
     const userName = readlineSync.question("May I have your name? ");
@@ -15,7 +15,7 @@ export function randomNum () {
     const questionNum = getRandomNum(1, 100);
     console.log(`Question: ${questionNum}`);
     return questionNum;
-}; 
+};
 
 export function yourAnswerIs () {
     const yourAnswer = readlineSync.question('Your answer: ');
@@ -26,6 +26,6 @@ export const isAnswerCorrect = (yourAnswer, questionNum, userName) => {
     const correctAnswer = (questionNum % 2 === 0) ? 'yes' : 'no';
     while (yourAnswer === correctAnswer) {
         return 'Correct!';
-    } 
+    }
     return `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`;
 };  */
