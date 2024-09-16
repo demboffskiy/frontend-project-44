@@ -10,7 +10,7 @@ const answerIsCorrectIf = (randomNumber1, randomNumber2) => {
     [num1, num2] = [num2, num1];
   }
 
-  while (randomNumber2 !== 0) {
+  while (num2 !== 0) {
     const temp = num2;
     num2 = num1 % num2;
     num1 = temp;
