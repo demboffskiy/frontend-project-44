@@ -1,2 +1,3 @@
 node_modules
 /src/games/drafts.js
+/src/games/is-even-game.js
