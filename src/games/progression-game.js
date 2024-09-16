@@ -5,11 +5,12 @@ const separator = ' ';
 
 const progressionArr = (randomNumber1, randomNumber2) => {
   const array = [randomNumber1];
+  let currentNumber = randomNumber1;
 
   for (let i = 0; i < 9; i += 1) {
-    const sum = array[i] + randomNumber2;
+    const sum = currentNumber + randomNumber2;
     array.push(sum);
-    randomNumber1 = sum;
+    currentNumber = sum;
   }
   return array;
 };
