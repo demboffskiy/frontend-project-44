@@ -16,7 +16,7 @@ export const gameEngine = (gameDescription, game) => {
     if (yourAnswerIs === correctAnswer) {
       console.log('Correct!');
     } else {
-      return console.log(`'${yourAnswerIs}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again ${userName}!`);
+      return console.log(`'${yourAnswerIs}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
     }
   }
   return console.log(`Congratulations, ${userName}!`);
