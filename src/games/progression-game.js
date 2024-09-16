@@ -28,4 +28,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer.toString()];
 };
 
-export const nameCorrectNum = () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => gameEngine(gameDescription, getQuestionAndAswer);

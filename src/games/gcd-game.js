@@ -21,4 +21,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer.toString()];
 };
 
-export const nameGcd = () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => gameEngine(gameDescription, getQuestionAndAswer);

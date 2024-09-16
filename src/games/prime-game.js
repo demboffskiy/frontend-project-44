@@ -17,4 +17,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer];
 };
 
-export const numberIsPrime = () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => gameEngine(gameDescription, getQuestionAndAswer);

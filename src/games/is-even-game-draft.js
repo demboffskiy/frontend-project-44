@@ -9,4 +9,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer];
 };
 
-export const startIsEvenGame = () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => gameEngine(gameDescription, getQuestionAndAswer);

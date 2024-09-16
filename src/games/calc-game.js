@@ -27,4 +27,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer.toString()];
 };
 
-export const sayYourNum = () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => gameEngine(gameDescription, getQuestionAndAswer);
