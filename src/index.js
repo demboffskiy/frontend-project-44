@@ -9,7 +9,9 @@ export const gameEngine = (gameDescription, game) => {
 
   console.log(gameDescription);
 
-  for (let i = 0; i < 3; i += 1) {
+  const gameCycle = 3;
+
+  for (let i = 0; i < gameCycle; i += 1) {
     const [question, correctAnswer] = game();
     console.log(`Question: ${question}`);
     const yourAnswerIs = readlineSync.question('Your answer: ');
