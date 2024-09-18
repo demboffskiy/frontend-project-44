@@ -3,16 +3,15 @@ import launchTheGame, { getRandom } from '../index.js';
 const gameDescription = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
+// eslint-disable-next-line consistent-return
 const answerIsCorrectIf = (randomNumber, operator, randomNumber2) => {
-  let result;
   if (operator === '+') {
-    result = randomNumber + randomNumber2;
-  } else if (operator === '-') {
-    result = randomNumber - randomNumber2;
-  } else if (operator === '*') {
-    result = randomNumber * randomNumber2;
+    return randomNumber + randomNumber2;
+  } if (operator === '-') {
+    return randomNumber - randomNumber2;
+  } if (operator === '*') {
+    return randomNumber * randomNumber2;
   }
-  return result;
 };
 
 const getQuestionAndAswer = () => {
