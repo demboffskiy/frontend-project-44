@@ -6,8 +6,9 @@ const separator = ' ';
 const progressionArr = (randomNumber1, randomNumber2) => {
   const array = [randomNumber1];
   let currentNumber = randomNumber1;
+  const numberOfIteractions = 9;
 
-  for (let i = 0; i < 9; i += 1) {
+  for (let i = 0; i < numberOfIteractions; i += 1) {
     const sum = currentNumber + randomNumber2;
     array.push(sum);
     currentNumber = sum;

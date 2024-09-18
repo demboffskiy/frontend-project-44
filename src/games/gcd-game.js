@@ -2,7 +2,7 @@ import launchTheGame, { getRandom } from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const answerIsCorrectIf = (randomNumber1, randomNumber2) => {
+const findGcdOfNums = (randomNumber1, randomNumber2) => {
   let num1 = randomNumber1;
   let num2 = randomNumber2;
 
@@ -23,7 +23,7 @@ const getQuestionAndAswer = () => {
   const secondNumber = getRandom(1000);
 
   const question = `${firstNumber} ${secondNumber}`;
-  const correctAnswer = answerIsCorrectIf(firstNumber, secondNumber);
+  const correctAnswer = findGcdOfNums(firstNumber, secondNumber);
 
   return [question, correctAnswer.toString()];
 };
