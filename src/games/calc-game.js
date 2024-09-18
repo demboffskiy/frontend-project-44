@@ -1,4 +1,4 @@
-import gameEngine, { getRandom } from '../index.js';
+import launchTheGame, { getRandom } from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
@@ -27,4 +27,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer.toString()];
 };
 
-export default () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => launchTheGame(gameDescription, getQuestionAndAswer);

@@ -1,4 +1,4 @@
-import gameEngine, { getRandom } from '../index.js';
+import launchTheGame, { getRandom } from '../index.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -17,4 +17,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => launchTheGame(gameDescription, getQuestionAndAswer);

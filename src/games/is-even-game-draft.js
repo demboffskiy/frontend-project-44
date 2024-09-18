@@ -1,4 +1,4 @@
-import gameEngine, { getRandom } from '../index.js';
+import launchTheGame, { getRandom } from '../index.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (number) => number % 2 === 0;
@@ -9,4 +9,4 @@ const getQuestionAndAswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameEngine(gameDescription, getQuestionAndAswer);
+export default () => launchTheGame(gameDescription, getQuestionAndAswer);
