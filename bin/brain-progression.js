@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import nameCorrectNum from '../src/games/progression-game.js';
+import startProgressionGame from '../src/games/progression-game.js';
 
-nameCorrectNum();
+startProgressionGame();
