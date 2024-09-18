@@ -20,7 +20,7 @@ const getQuestionAndAswer = () => {
   const firstNumber = getRandom(20);
   const secondNumber = getRandom(10);
   const questionArray = progressionArr(firstNumber, secondNumber);
-  const randomItem = Math.floor(Math.random() * questionArray.length);
+  const randomItem = getRandom(questionArray.length);
   const correctNumber = questionArray[randomItem];
   questionArray[randomItem] = '..';
 
